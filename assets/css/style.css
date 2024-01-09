@@ -606,7 +606,7 @@ h4 {
 .front {
     backface-visibility: hidden;
     border-left: 3px solid #dac400;
-    background: url("/assets/images/border.png");
+    background: url("/assets/images/border-pirrou.png");
     background-size: cover;
     background-position: center;
 }
@@ -648,7 +648,7 @@ h4 {
 
 .back {
     z-index: 0;
-    background: url("/assets/images/border.png");
+    background: url("/assets/images/border-pirrou.png");
     background-size: cover;
     background-position: center;
     background-color: white;

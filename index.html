@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Pirrou</title>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- <link rel="stylesheet" href="assets/css/style-card.css" /> -->
+    <script
+      src="https://kit.fontawesome.com/fd3dfecc83.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="moon">
+      <div class="crater1"></div>
+      <div class="crater2"></div>
+      <div class="crater3"></div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <div id="sea"></div>
+    <div id="beach"></div>
+
+    <img
+      src="https://dl.dropbox.com/s/2k0mtrxc2dqurmh/jumping.png"
+      alt="Jumping-people"
+      id="people"
+    />
+
+    <div id="merrywrap" class="merrywrap">
+      <div class="giftbox">
+        <div class="cover">
+          <div></div>
+        </div>
+
+        <div class="box"></div>
+      </div>
+
+      <div class="icons">
+        <div class="row">
+          <span>H</span>
+          <span>a</span>
+          <span>p</span>
+          <span>p</span>
+          <span>y</span>
+        </div>
+        <div class="row">
+          <span>B</span>
+          <span>i</span>
+          <span>r</span>
+          <span>t</span>
+          <span>h</span>
+          <span>d</span>
+          <span>a</span>
+          <span>y</span>
+        </div>
+
+        <div class="row">
+          <span>P</span>
+          <span>i</span>
+          <span>r</span>
+          <span>r</span>
+          <span>o</span>
+          <span>u</span>
+          <span></span>
+          <span>S</span>
+          <span>o</span>
+          <span>p</span>
+          <span>h</span>
+          <span>i</span>
+          <span>e</span>
+        </div>
+      </div>
+
+      <div id="card" class="card-container">
+        <!-- Previous Button -->
+        <button id="prev-btn" hidden>
+          <i class="fas fa-arrow-circle-left"></i>
+        </button>
+
+        <!-- The Book -->
+        <div id="book" class="book" hidden>
+          <!-- Paper 1 -->
+          <div id="p1" class="paper">
+            <div class="front">
+              <div id="f1" class="front-content">
+                <h2>Untuk</h2>
+                <h1 class="book-title">Pirrou</h1>
+                <img
+                  class="cover-img"
+                  src="./assets/images/pirrou.png"
+                  alt="wati"
+                />
+              </div>
+            </div>
+            <div class="back">
+              <div id="b1" class="back-content">
+                <div class="content">
+                  <div class="item-text">
+                    <!-- <h2>PEMBUKAAN</h2> -->
+                    <h3>
+                      Kami segenap Faemily mengucapkan Happy Birthday untuk
+                      Pirrou Sophie, kami juga ada beberapa pesan-pesan dan harapan
+                      yang ingin kami sampaikan
+                    </h3>
+                  </div>
+                  <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Paper 2 -->
+          <div id="p2" class="paper">
+            <div class="front">
+              <div id="f2" class="front-content">
+                <!-- <h1>Some Cool Page</h1> -->
+                <img
+                  class="isi-img"
+                  src="./assets/images/aku_faemily.png"
+                  alt="aku soangers"
+                />
+              </div>
+            </div>
+            <div class="back">
+              <div id="b2" class="back-content">
+                <div class="content">
+                  <div class="item-text">
+                    <h3>
+                      "Selamat ulang tahun pirrou sophie, semoga makin semangat
+                      ngelive terus dan semakin seiso ❤"
+                      <br />
+                      <br />(Mitsuki)
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Paper 3 -->
+          <div id="p3" class="paper">
+            <div class="front">
+              <div id="f3" class="front-content">
+                <div class="content">
+                  <div class="item-text">
+                    <h3>
+                      "HBD Kapir🥳🎉, wish u all the best deh pokoknya
+                      <br />semoga tujuan dan harapan yang belum tercapai
+                      ditahun sebelumnya bisa tercapai ditahun ini, aminnnn🙏
+                      <br />dan walaupun kapir nanti udah melahirkan, semoga
+                      tetep semangat ngonten & streamnya🙏"
+                      <br />
+                      <br />
+                      (Kevin ganteng pacarnya Haerin New Jeans)
+                    </h3>
+                  </div>
+                </div>
+                <!-- <img
+                  class="isi-img"
+                  src="./assets/images/wati-kaoru.gif"
+                  alt="wati"
+                /> -->
+              </div>
+            </div>
+            <div class="back">
+              <div id="b3" class="back-content">
+                <div class="content">
+                  <div class="item-text">
+                    <h3>
+                      "HBD teruntuk kamu yang sudah banyak memberi kita hiburan
+                      dan menemani hari hari kita semua.
+                      <br />Best wishes tuk kamu, semoga semua plan dan
+                      cita-citanya cepet terwujud. <br />Semoga diberi
+                      kesehatan, panjang umur, lancar rejekinya, diberi
+                      kebahagiaan, dan tidak lupa semoga cepet dapat 100K.
+                      <br />Terus berkarya, konsisten, jangan menyerah, make her
+                      proud of you. <br />You have been a gift for our lives and
+                      we will always support you"
+                      <br />
+                      <br />(Kaoru)
+                    </h3>
+                  </div>
+                </div>
+                <!-- <h1>The Good Bye</h1> -->
+              </div>
+            </div>
+          </div>
+          <!-- Paper 4 -->
+          <div id="p4" class="paper">
+            <div class="front">
+              <div id="f4" class="front-content">
+                <img
+                  class="isi-img"
+                  src="./assets/images/art-kaoru.png"
+                  alt="art kaoru"
+                />
+              </div>
+            </div>
+            <div class="back">
+              <div id="b4" class="back-content">
+                <div class="content">
+                  <div class="item-text">
+                    <h3>
+                      "Tetap semangat walau flu kocheng membuat hidung meler
+                      terus :v"
+                      <br />
+                      <br />(Kuro)
+                    </h3>
+                  </div>
+                </div>
+                <!-- <h1>The Good Bye</h1> -->
+              </div>
+            </div>
+          </div>
+          <!-- Paper 5 -->
+          <div id="p5" class="paper">
+            <div class="front">
+              <div id="f5" class="front-content">
+                <!-- <div class="content">
+                  <div class="item-text"> -->
+                <h3>
+                  "Gws yog- I mean, hbd pir"
+                  <br />
+                  <br />(Alog)
+                </h3>
+                <!-- </div>
+                </div> -->
+              </div>
+            </div>
+            <div class="back">
+              <div id="b5" class="back-content">
+                <div class="content">
+                  <div class="item-text">
+                    <h3>
+                      "Selamat Ulang tahun kapiro~, semoga kedepannya bisa lebih
+                      senang dalam menjalani apa yang kamu jalankan sekarang ya.
+                      Terima kasih juga sudah berusaha yang terbaik untuk
+                      menghibur kami para viewer. Maaf gabisa ngasih hadiah ya,
+                      tapi mau gimanapun turut senang dan semoga di tahun ini
+                      menjadi lembaran baru yang memberikan keberkahan dan
+                      keindahan di dalamnya"
+                      <br />
+                      <br />(Thafua)
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Paper 6 -->
+          <div id="p6" class="paper">
+            <div class="front">
+              <div id="f6" class="front-content">
+                <!-- <div class="content"> -->
+                <!-- <div class="item-text"> -->
+                <h3>
+                  "HBD PUTRI"
+                  <br />
+                  <br />(Yuimon)
+                </h3>
+                <!-- </div> -->
+                <!-- </div> -->
+                <!-- <img
+                  class="isi-img"
+                  src="./assets/images/wati-patan.jpeg"
+                  alt="wati"
+                /> -->
+              </div>
+            </div>
+            <div class="back">
+              <div id="b6" class="back-content">
+                <div class="content">
+                  <div class="item-text">
+                    <h4>
+                      "Satu tahun itu 365 hari, cuman ada beberapa hari aja
+                      bagiku yang paling berkesan. Dan salah satunya adalah hari
+                      ini. Happy belated birthday Pirrou! I always wish the best
+                      for your happiness."
+                      <br />
+                      <br />(Yami Kaito)
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Paper 7 -->
+          <div id="p7" class="paper">
+            <div class="front">
+              <div id="f7" class="front-content">
+                <img
+                  class="isi-img"
+                  src="./assets/images/art-yami.png"
+                  alt="wati"
+                />
+              </div>
+            </div>
+            <div class="back">
+              <div id="b7" class="back-content">
+                <div class="content">
+                  <div class="item-text">
+                    <h4>
+                      "Happy Birthday Digikagi's Lovely Barista, Hope you are
+                      doing good today!~ Thank you untuk semua yang udah kamu
+                      lakuin buat DeLatte!~ Aku yakin kita semua sebagai DeLatte
+                      Turut senang di hari Ulang Tahunmu ini. Semoga hari ini
+                      Dan seterusnya bisa tercapai semua yang kamu idamkan~
+                      Jangan pernah bosan untuk bernyanyi yaa, Karena jujur kamu
+                      tuh keren banget Saat Menyanyi !~ Once again Thank you for
+                      all of your hard work, You did well !! Wish you All the
+                      best in all aspects of life Dev!~"
+                      <br />
+                      <br />(Althaf)
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Paper 8 -->
+          <div id="p8" class="paper">
+            <div class="front">
+              <div id="f8" class="front-content">
+                <img
+                  class="isi-img"
+                  src="./assets/images/wati-althaf.png"
+                  alt="wati"
+                />
+              </div>
+            </div>
+            <div class="back">
+              <div id="b8" class="back-content">
+                <div class="content">
+                  <div class="item-text">
+                    <h3>
+                      "HBD dev, semoga sehat selalu, dilancarkan rejekinya,
+                      diberikan kekuatan dalam menghadapi segala urusannya, dan
+                      selalu diberikan ketabahan."
+                      <br />
+                      <br />(len)
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Paper 9 -->
+          <div id="p9" class="paper">
+            <div class="page-image-nasgorest">
+              <div id="f9" class="front-content">
+                <img
+                  class="isi-img"
+                  src="./assets/images/wati-dika.png"
+                  alt="wati"
+                />
+              </div>
+            </div>
+            <div class="back">
+              <div id="b9" class="back-content">
+                <div class="content">
+                  <div class="item-text">
+                    <h3>
+                      "Happy Birtday Depi
+                      <br />Semoga panjang umur, selalu diberikan kesehatan, dan
+                      diberikan kelancaran di semua kegiatanmu."
+                      <br />
+                      <br />(Yamikaito)
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Paper 10 -->
+          <div id="p10" class="paper">
+            <div class="page-image-hengky">
+              <div id="f10" class="front-content">
+                <img
+                  class="isi-img"
+                  src="./assets/images/wati-yamikaito.jpg"
+                  alt="wati"
+                />
+              </div>
+            </div>
+            <div class="back">
+              <div id="b10" class="back-content">
+                <div class="content">
+                  <div class="item-text">
+                    <h3>
+                      "HAPPY BIRTHDAY WatiKu! Terima kasih telah dan masih
+                      berjuang hingga sejauh ini.., semoga sehat selalu dan
+                      kedepannya bisa sering Livestream lagi... Amiin..."
+                      <br />
+                      <br />(Yuimon)
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Paper 11 -->
+          <div id="p11" class="paper">
+            <div class="front">
+              <div id="f11" class="front-content">
+                <img
+                  class="isi-img"
+                  src="./assets/images/wati-yuimon.PNG"
+                  alt="wati"
+                />
+              </div>
+            </div>
+            <div class="back">
+              <div id="b11" class="back-content">
+                <div class="content">
+                  <div class="item-text">
+                    <h3>
+                      "Selamat ulang tahun wati ku 🎉
+                      <br />
+                      <br />Semoga kamu selalu diberi kesehatan, kekuatan serta
+                      kebaikan dan keberkahan dalam segala hal 😄"
+                      <br />
+                      <br />(Kelvin)
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Paper 12 -->
+          <div id="p12" class="paper">
+            <div class="front">
+              <div id="f12" class="front-content">
+                <div class="content">
+                  <div class="item-text">
+                    <h3>
+                      "Selamat tambah tuwa Wati, semoga yg kamu semogain dapat
+                      tersemogakan semua. Sekali lagi, Happy birthday Devi
+                      Nalawati..!"
+                      <br />
+                      <br />(Rest A Rea)
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="back">
+              <div id="b12" class="back-content">
+                <div class="content">
+                  <div class="item-text">
+                    <h3>
+                      "Besbi besbi buat gadis pecinta kopi, devi nalawati~
+                      <br />Nih ku kasih biji kopi"
+                      <br />
+                      <br />(Nasgorest)
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Paper 13 -->
+          <div id="p13" class="paper">
+            <div class="front">
+              <div id="f13" class="front-content">
+                <img
+                  class="isi-img"
+                  src="./assets/images/wati-nasgorest.png"
+                  alt="wati"
+                />
+              </div>
+            </div>
+            <div class="back">
+              <div id="b13" class="back-content">
+                <div class="content">
+                  <div class="item-text">
+                    <h3>
+                      "Happy birthday dep, semoga panjang umur dan sehat selalu.
+                      Kurang-kurangin ngehalunya, sering-sering streamingnya.
+                      Amin"
+                      <br />
+                      <br />(Setsun)
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Paper 14 -->
+          <div id="p14" class="paper">
+            <div class="front">
+              <div id="f14" class="front-content">
+                <div class="content">
+                  <div class="item-text">
+                    <h3>
+                      "Selamat ulang tahun Wati Naladevi si Cegil dari DigiKagi
+                      <br />Semoga kesehatan yang baik dan waktu yang
+                      menyenangkan selalu menjadi milikmu"
+                      <br />
+                      <br />(Yogi)
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="back">
+              <div id="b14" class="back-content">
+                <div class="content">
+                  <div class="item-text">
+                    <h3>
+                      "Sebenernya aku ga tahu pengen nulis apa, soalnya tadi
+                      udah nulis diform. Tapi yawdah lah yach, anggep aja aku
+                      lagi nulis sesuatu yang wholesome banget dan meaningful.
+                      Kamu baca ini sambil pura-pura terharu aja, kalo bisa-bisa
+                      pura pura nangis juga lebih bagus."
+                      <br />
+                      <br />(Dang Der Ji)
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Paper 15 -->
+          <div id="p15" class="paper">
+            <div class="front">
+              <div id="f15" class="front-content">
+                <img
+                  class="isi-img"
+                  src="./assets/images/wati-derji.png"
+                  alt="wati"
+                />
+              </div>
+            </div>
+            <div class="back">
+              <div id="b15" class="back-content">
+                <div class="content">
+                  <div class="item-text">
+                    <h3>
+                      "Happuy Bijidaaay watiii, selamat hari jadi untukmu gadis
+                      sipaling kopi~
+                      <br />Semoga harapan dan goals ditahun lalu yang belum
+                      tercapai bisa tercapai ditahun ini. <br />Semoga bisa
+                      menyesuaikan sama kehidupan barunya supaya kedepannya bisa
+                      konsisten streaming sama ngontennya lagii, aminnn.
+                      <br />Last but not least dont forget to take care of
+                      yourself, semangaat~"
+                      <br />
+                      <br />(Kevin)
+                    </h3>
+                  </div>
+                </div>
+                <!-- <h1></h1> -->
+              </div>
+            </div>
+          </div>
+          <!-- Paper 16 -->
+          <div id="p16" class="paper">
+            <div class="front">
+              <div id="f16" class="front-content">
+                <img
+                  class="isi-img"
+                  src="./assets/images/wati-kepin.jpg"
+                  alt="wati"
+                />
+              </div>
+            </div>
+            <div class="back">
+              <div id="b16" class="back-content">
+                <div class="content">
+                  <div class="item-text">
+                    <h4>
+                      "Makasih buat semuanya yang udah berkontribusi meramaikan
+                      project kecil-kecilan ini.
+                      <br />
+                      <br />Dan buat Pirrou, semoga harapan dan pesan-pesan ini
+                      bisa menjadi sebuah kesan yang baik buat kamu kedepannya,
+                      dan semoga kita bisa berjumpa lagi di ulang tahun
+                      selanjutnya."
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button id="next-btn" hidden>
+          <i class="fas fa-arrow-circle-right"></i>
+        </button>
+      </div>
+      <div id="btn-audio" class="btn-audio" hidden>
+        <button id="mute-btn" type="button">
+          <i id="icon-music" class="fa-solid fa-volume-low"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="video"></div>
+
+    <div>
+      <audio id="audio" loop>
+        <source src="./assets/audio/bgm.ogg" type="audio/mpeg" />
+      </audio>
+    </div>
+
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

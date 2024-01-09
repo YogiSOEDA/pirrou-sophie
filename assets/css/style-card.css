@@ -1,0 +1,880 @@
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    /* background-color: #dac400; */
+    background: url("/assets/images/wati-bg.png");
+    background-size: cover;
+}
+
+/* Button */
+button {
+    border: none;
+    background-color: transparent;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: rgb(102, 102, 102);
+}
+
+i {
+    color: gray;
+    font-size: 4em;
+}
+
+h3 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+#b16 h2 {
+    text-align: center;
+}
+
+.content {
+    width: 260px;
+}
+
+.item-text {
+    width: fit-content;
+}
+
+.container {
+    justify-content: center;
+    display: block;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 15%
+}
+
+.balloon-group {
+    display: block;
+    padding-top: -20%
+}
+
+/* Book */
+.book {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    transition: transform 0.5s;
+}
+
+.paper {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+    /* background: url("./border.png");
+    background-size: cover; */
+}
+
+.paper-image {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+    background: url("/assets/images/wati-border.jpg");
+    background-size: cover;
+}
+
+.page-image-setsun {
+    backface-visibility: hidden;
+    border-left: 3px solid #dac400;
+    background: url("/assets/images/wati-border.jpg"), url("/assets/images/palit-setsun.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.page-image-andhika {
+    backface-visibility: hidden;
+    border-left: 3px solid #dac400;
+    background: url("/assets/images/wati-border.jpg"), url("/assets/images/palit-andhika.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.page-image-patan {
+    backface-visibility: hidden;
+    border-left: 3px solid #dac400;
+    background: url("/assets/images/wati-border.jpg"), url("/assets/images/palit-patan.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.page-image-hengky {
+    backface-visibility: hidden;
+    border-left: 3px solid #dac400;
+    background: url("/assets/images/wati-border.jpg"), url("/assets/images/palit-hengky.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.page-image-nasgorest {
+    backface-visibility: hidden;
+    border-left: 3px solid #dac400;
+    background: url("/assets/images/wati-border.jpg"), url("/assets/images/palit-nasgorest.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.page-image-gadjeman {
+    backface-visibility: hidden;
+    border-left: 3px solid #dac400;
+    background: url("/assets/images/wati-border.jpg"), url("/assets/images/palit-gadjeman.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.page-image-yami {
+    backface-visibility: hidden;
+    border-left: 3px solid #dac400;
+    background: url("/assets/images/wati-border.jpg"), url("/assets/images/palit-yami.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.page-image {
+    backface-visibility: hidden;
+    border-left: 3px solid #dac400;
+    background: url("/assets/images/wati-border.jpg"), url("/assets/images/palit2.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.front {
+    backface-visibility: hidden;
+    border-left: 3px solid #dac400;
+    background: url("/assets/images/wati-border.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.front,
+.back,
+.page-image,
+.page-image-yami,
+.page-image-gadjeman,
+.page-image-nasgorest,
+.page-image-hengky,
+.page-image-patan,
+.page-image-andhika,
+.page-image-setsun {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.front,
+.page-image,
+.page-image-yami,
+.page-image-gadjeman,
+.page-image-nasgorest,
+.page-image-hengky,
+.page-image-patan,
+.page-image-andhika,
+.page-image-setsun {
+    z-index: 1;
+}
+
+.back {
+    z-index: 0;
+    background: url("/assets/images/wati-border.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: white;
+}
+
+.front-content,
+.back-content {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-content {
+    transform: rotateY(180deg)
+}
+
+/* Paper Flipped */
+.flipped .front,
+.flipped .back,
+.flipped .page-image,
+.flipped .page-image-yami,
+.flipped .page-image-gadjeman,
+.flipped .page-image-nasgorest,
+.flipped .page-image-hengky,
+.flipped .page-image-patan,
+.flipped .page-image-andhika,
+.flipped .page-image-setsun {
+    transform: rotateY(-180deg)
+}
+
+/* Paper Z-index */
+#p1 {
+    z-index: 16;
+}
+
+#p2 {
+    z-index: 15;
+}
+
+#p3 {
+    z-index: 14;
+}
+ 
+#p4 {
+    z-index: 13;
+}
+
+#p5 {
+    z-index: 12;
+}
+
+#p6 {
+    z-index: 11;
+}
+
+#p7 {
+    z-index: 10;
+}
+
+#p8 {
+    z-index: 9;
+}
+
+#p9 {
+    z-index: 8;
+}
+
+#p10 {
+    z-index: 7;
+}
+
+#p11 {
+    z-index: 6;
+}
+
+#p12 {
+    z-index: 5;
+}
+
+#p13 {
+    z-index: 4;
+}
+
+#p14 {
+    z-index: 3;
+}
+
+#p15 {
+    z-index: 2;
+}
+
+#p16 {
+    z-index: 1;
+}
+
+
+
+
+
+/* Customization */
+
+.book-title {
+    font-size: 3em;
+    margin-bottom: 5px;
+}
+
+.cover-img {
+    width: 270px;
+    height: 270px;
+    object-fit: cover;
+    /* border-radius: 30px; */
+}
+
+.gambar-babeh {
+    width: 300px;
+    height: 440px;
+    /* width: 300px;
+    height: 440px; */
+    object-fit: cover;
+    border-radius: 30px;
+    background: url("/assets/images/palit2.png");
+    align-items: center;
+}
+
+.isi-img {
+    /* width: 100%;
+    height: 100%; */
+    width: 260px;
+    /* height: 440px; */
+    /* object-fit: cover; */
+    border-radius: 10px;
+}
+
+.isi-img-yogi {
+    height: 390px;
+}
+
+#b1 {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    justify-content: space-around;
+}
+
+#b1 h2 {
+    font-size: 2em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#b1 p {
+    margin-bottom: 20px;
+}
+
+
+.balloon {
+    width: 738px;
+    margin: 0 auto;
+    padding-top: 30px;
+    position: relative;
+    text-align: center;
+}
+        
+.balloon>div {
+    width: 94px;
+    height: 115px;
+    background: rgba(182, 15, 97, 0.9);
+    border-radius: 0;
+    border-radius: 80% 80% 80% 80%;
+    margin: 0 auto;
+    position: absolute;
+    padding: 10px;
+    box-shadow: inset 17px 7px 10px rgba(182, 15, 97, 0.9);
+    -webkit-transform-origin: bottom center;
+}
+        
+.balloon>div:nth-child(1) {
+    background: rgba(182, 15, 97, 0.9);
+    left: 0;
+    box-shadow: inset 10px 10px 10px rgba(135, 11, 72, 0.9);
+    -webkit-animation: balloon1 6s ease-in-out infinite;
+    -moz-animation: balloon1 6s ease-in-out infinite;
+    -o-animation: balloon1 6s ease-in-out infinite;
+    animation: balloon1 6s ease-in-out infinite;
+}
+        
+.balloon>div:nth-child(1):before {
+    color: rgba(182, 15, 97, 0.9);
+}
+        
+.balloon>div:nth-child(2) {
+    background: rgba(242, 112, 45, 0.9);
+    left: 120px;
+    box-shadow: inset 10px 10px 10px rgba(222, 85, 14, 0.9);
+    -webkit-animation: balloon2 6s ease-in-out infinite;
+    -moz-animation: balloon2 6s ease-in-out infinite;
+    -o-animation: balloon2 6s ease-in-out infinite;
+    animation: balloon2 6s ease-in-out infinite;
+}
+        
+.balloon>div:nth-child(2):before {
+    color: rgba(242, 112, 45, 0.9);
+}
+        
+.balloon>div:nth-child(3) {
+    background: rgba(45, 181, 167, 0.9);
+    left: 240px;
+    box-shadow: inset 10px 10px 10px rgba(35, 140, 129, 0.9);
+    -webkit-animation: balloon4 6s ease-in-out infinite;
+    -moz-animation: balloon4 6s ease-in-out infinite;
+    -o-animation: balloon4 6s ease-in-out infinite;
+    animation: balloon4 6s ease-in-out infinite;
+}
+        
+.balloon>div:nth-child(3):before {
+    color: rgba(45, 181, 167, 0.9);
+}
+        
+.balloon>div:nth-child(4) {
+    background: rgba(190, 61, 244, 0.9);
+    left: 360px;
+    box-shadow: inset 10px 10px 10px rgba(173, 14, 240, 0.9);
+    -webkit-animation: balloon1 5s ease-in-out infinite;
+    -moz-animation: balloon1 5s ease-in-out infinite;
+    -o-animation: balloon1 5s ease-in-out infinite;
+    animation: balloon1 5s ease-in-out infinite;
+}
+        
+.balloon>div:nth-child(4):before {
+    color: rgba(190, 61, 244, 0.9);
+}
+        
+.balloon>div:nth-child(5) {
+    background: rgba(180, 224, 67, 0.9);
+    left: 480px;
+    box-shadow: inset 10px 10px 10px rgba(158, 206, 34, 0.9);
+    -webkit-animation: balloon3 5s ease-in-out infinite;
+    -moz-animation: balloon3 5s ease-in-out infinite;
+    -o-animation: balloon3 5s ease-in-out infinite;
+    animation: balloon3 5s ease-in-out infinite;
+}
+        
+.balloon>div:nth-child(5):before {
+    color: rgba(180, 224, 67, 0.9);
+}
+        
+.balloon>div:nth-child(6) {
+    background: rgba(242, 194, 58, 0.9);
+    left: 600px;
+    box-shadow: inset 10px 10px 10px rgba(234, 177, 15, 0.9);
+    -webkit-animation: balloon2 3s ease-in-out infinite;
+    -moz-animation: balloon2 3s ease-in-out infinite;
+    -o-animation: balloon2 3s ease-in-out infinite;
+    animation: balloon2 3s ease-in-out infinite;
+}
+        
+.balloon>div:nth-child(6):before {
+    color: rgba(242, 194, 58, 0.9);
+}
+        
+.balloon>div:before {
+    color: rgba(182, 15, 97, 0.9);
+    position: absolute;
+    bottom: -11px;
+    left: 52px;
+    content: "▲";
+    font-size: 1em;
+}
+        
+.hbdspan {
+    font-size: 2.8em;
+    color: white;
+    position: relative;
+    top: 30px;
+}
+        
+/*BALLOON 1 4*/
+@-webkit-keyframes balloon1 {
+        
+    0%,
+    100% {
+        -webkit-transform: translateY(0) rotate(-6deg);
+    }
+
+    50% {
+        -webkit-transform: translateY(-20px) rotate(8deg);
+    }
+}
+        
+@-moz-keyframes balloon1 {
+        
+    0%,
+    100% {
+        -moz-transform: translateY(0) rotate(-6deg);
+    }
+        
+    50% {
+        -moz-transform: translateY(-20px) rotate(8deg);
+    }
+}
+        
+@-o-keyframes balloon1 {
+        
+    0%,
+    100% {
+        -o-transform: translateY(0) rotate(-6deg);
+    }
+        
+    50% {
+        -o-transform: translateY(-20px) rotate(8deg);
+    }
+}
+        
+@keyframes balloon1 {
+        
+    0%,
+    100% {
+        transform: translateY(0) rotate(-6deg);
+    }
+        
+    50% {
+        transform: translateY(-20px) rotate(8deg);
+    }
+}
+        
+/* BAllOON 2 5*/
+@-webkit-keyframes balloon2 {
+        
+    0%,
+    100% {
+        -webkit-transform: translateY(0) rotate(6eg);
+    }
+        
+    50% {
+        -webkit-transform: translateY(-30px) rotate(-8deg);
+    }
+}
+        
+@-moz-keyframes balloon2 {
+        
+    0%,
+    100% {
+        -moz-transform: translateY(0) rotate(6deg);
+    }
+        
+    50% {
+        -moz-transform: translateY(-30px) rotate(-8deg);
+    }
+}
+        
+@-o-keyframes balloon2 {
+        
+    0%,
+    100% {
+        -o-transform: translateY(0) rotate(6deg);
+    }
+        
+    50% {
+        -o-transform: translateY(-30px) rotate(-8deg);
+    }
+}
+        
+@keyframes balloon2 {
+        
+    0%,
+    100% {
+        transform: translateY(0) rotate(6deg);
+    }
+        
+    50% {
+        transform: translateY(-30px) rotate(-8deg);
+    }
+}
+        
+/* BAllOON 0*/
+@-webkit-keyframes balloon3 {
+        
+    0%,
+    100% {
+        -webkit-transform: translate(0, -10px) rotate(6eg);
+    }
+        
+    50% {
+        -webkit-transform: translate(-20px, 30px) rotate(-8deg);
+    }
+}
+        
+@-moz-keyframes balloon3 {
+        
+    0%,
+    100% {
+        -moz-transform: translate(0, -10px) rotate(6eg);
+    }
+        
+    50% {
+        -moz-transform: translate(-20px, 30px) rotate(-8deg);
+    }
+}
+        
+@-o-keyframes balloon3 {
+        
+    0%,
+    100% {
+        -o-transform: translate(0, -10px) rotate(6eg);
+    }
+        
+    50% {
+        -o-transform: translate(-20px, 30px) rotate(-8deg);
+    }
+}
+        
+@keyframes balloon3 {
+        
+    0%,
+    100% {
+        transform: translate(0, -10px) rotate(6eg);
+    }
+        
+    50% {
+        transform: translate(-20px, 30px) rotate(-8deg);
+    }
+}
+        
+/* BAllOON 3*/
+@-webkit-keyframes balloon4 {
+        
+    0%,
+    100% {
+        -webkit-transform: translate(10px, -10px) rotate(-8eg);
+    }
+        
+    50% {
+        -webkit-transform: translate(-15px, 20px) rotate(10deg);
+    }
+}
+        
+@-moz-keyframes balloon4 {
+        
+    0%,
+    100% {
+        -moz-transform: translate(10px, -10px) rotate(-8eg);
+    }
+        
+    50% {
+        -moz-transform: translate(-15px, 10px) rotate(10deg);
+    }
+}
+        
+@-o-keyframes balloon4 {
+        
+    0%,
+    100% {
+        -o-transform: translate(10px, -10px) rotate(-8eg);
+    }
+        
+    50% {
+        -o-transform: translate(-15px, 10px) rotate(10deg);
+    }
+}
+        
+@keyframes balloon4 {
+        
+    0%,
+    100% {
+        transform: translate(10px, -10px) rotate(-8eg);
+    }
+        
+    50% {
+        transform: translate(-15px, 10px) rotate(10deg);
+    }
+}
+
+/* audio */
+.btn-audio {
+    text-align: right;
+}
+
+.cake {
+    display: inline;
+    padding-top: -100%;
+}
+
+/* cake */
+.container-cake {
+    height: 100vh;
+    width: 31.25em;
+}
+
+.center,
+.container-cake * {
+    position: absolute;
+    margin: auto;
+    left: 65em;
+    right: 0;
+}
+
+.layer-1 {
+    background-color: #367bd0;
+    height: 3.5em;
+    width: 7.87em;
+    top: -7.5em;
+    background-size: 1.56em 9.37em;
+    background-position: 0 -1.25em;
+    background-image: radial-gradient(circle at 0.78em 1em,
+            #f5f5f5 1.25em,
+            transparent 1.3em);
+    animation: fall-1 8s infinite;
+}
+
+@keyframes fall-1 {
+    20% {
+        transform: translateY(55.62em);
+    }
+
+    100% {
+        transform: translateY(55.62em);
+    }
+}
+
+.layer-1:before {
+    content: "";
+    position: absolute;
+    height: 0.75em;
+    width: 100%;
+    background-color: #f54597;
+    bottom: 0;
+}
+
+.layer-1:after {
+    content: "";
+    position: absolute;
+    height: 0.27em;
+    width: 0.27em;
+    background-color: #9a152b;
+    border-radius: 50%;
+    top: 1.81em;
+    left: 0.47em;
+    box-shadow: 1.12em 0.56em #f1663e, 2.01em -0.6em #f5e671, 3.37em 0.5em #9a152b,
+        4.8em -0.56em #f1663e, 5.98em 0 #f5e671, 6.95em 0.36em #9a152b;
+}
+
+.layer-2 {
+    height: 2.5em;
+    width: 6.62em;
+    background-color: #ff99b9;
+    top: -2.56em;
+    background-image: repeating-linear-gradient(90deg,
+            transparent 0,
+            transparent 0.75em,
+            #ff4a83 0.12em,
+            #ff4a83 1.5em);
+    animation: fall-2 8s infinite;
+}
+
+@keyframes fall-2 {
+    20% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(48.12em);
+    }
+
+    100% {
+        transform: translateY(48.12em);
+    }
+}
+
+.layer-3 {
+    background-color: #9a202f;
+    height: 3.5em;
+    width: 4.7em;
+    top: -4.44em;
+    background-size: 1.56em 9.37em;
+    background-position: 0 -1.25em;
+    background-image: radial-gradient(circle at 0.78em 1em,
+            #ffee8d 1.15em,
+            transparent 1.2em);
+    animation: fall-3 8s infinite;
+}
+
+@keyframes fall-3 {
+    40% {
+        transform: translateY(0);
+    }
+
+    60% {
+        transform: translateY(46.5em);
+    }
+
+    100% {
+        transform: translateY(46.5em);
+    }
+}
+
+.layer-3:before {
+    position: absolute;
+    content: "";
+    height: 0.63em;
+    width: 100%;
+    top: 1.8em;
+    background-color: #ffee8d;
+}
+
+.layer-3:after {
+    position: absolute;
+    content: "";
+    background-color: #f54597;
+    height: 0.45em;
+    width: 0.45em;
+    border-radius: 50%;
+    top: -0.55em;
+    left: 0.27em;
+    box-shadow: 1.87em 0 #f54597, 3.75em 0 #f54597;
+}
+
+.candle {
+    height: 2.12em;
+    width: 0.75em;
+    background-color: #3aa2cf;
+    top: -3.12em;
+    border-radius: 0.12em 0.12em 0 0;
+    animation: fall-4 8s infinite;
+}
+
+@keyframes fall-4 {
+    60% {
+        transform: translateY(0);
+    }
+
+    80% {
+        transform: translateY(43.12em);
+    }
+
+    100% {
+        transform: translateY(43.12em);
+    }
+}
+
+.candle:before {
+    position: absolute;
+    content: "";
+    background-color: #f1af3f;
+    height: 1.25em;
+    width: 1.25em;
+    margin: -0.25em;
+    border-radius: 50% 50% 50% 0;
+    top: -1.3em;
+    transform: rotate(135deg);
+    animation: flame 2s infinite;
+}
+
+@keyframes flame {
+    50% {
+        transform: scale(0.8) rotate(135deg);
+    }
+}

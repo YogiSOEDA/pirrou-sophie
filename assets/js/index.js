@@ -336,6 +336,7 @@ function reveal() {
   }
 
   audio.play();
+  audio.volume = 0.2;
 
   // var ifrm = document.createElement("iframe");
   // ifrm.setAttribute(

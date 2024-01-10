@@ -52,7 +52,7 @@ function closeBook(isFirstPage) {
     var ifrm = document.createElement("iframe");
     ifrm.setAttribute(
       "src",
-      "https://www.youtube.com/embed/pAjeBw7PZ8k?controls=0&loop=1&autoplay=1"
+      "https://www.youtube.com/embed/t5_EbJO58ng?controls=0&loop=1&autoplay=1"
     );
     ifrm.style.border = "none";
     document.querySelector("#video").appendChild(ifrm);

@@ -591,14 +591,14 @@ h4 {
   background-position: center;
 }
 
-.page-image-patan {
+/* .page-image-patan {
   backface-visibility: hidden;
   border-left: 3px solid #dac400;
   background: url("/assets/images/border-pirrou.png"),
     url("/assets/images/art-patan.jpeg");
   background-size: cover;
   background-position: center;
-}
+} */
 
 .page-image-hengky {
   backface-visibility: hidden;
@@ -660,7 +660,7 @@ h4 {
 .page-image-gadjeman,
 .page-image-nasgorest,
 .page-image-hengky,
-.page-image-patan,
+/* .page-image-patan, */
 .page-image-andhika,
 .page-image-setsun,
 .page-patan {
@@ -697,7 +697,7 @@ h4 {
 .page-image-gadjeman,
 .page-image-nasgorest,
 .page-image-hengky,
-.page-image-patan,
+/* .page-image-patan, */
 .page-image-andhika,
 .page-image-setsun,
 .page-patan {

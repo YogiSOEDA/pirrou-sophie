@@ -17,7 +17,7 @@ const paper11 = document.querySelector("#p11");
 const paper12 = document.querySelector("#p12");
 const paper13 = document.querySelector("#p13");
 const paper14 = document.querySelector("#p14");
-// const paper15 = document.querySelector("#p15");
+const paper15 = document.querySelector("#p15");
 // const paper16 = document.querySelector("#p16");
 
 const audio = document.getElementById('audio');
@@ -34,7 +34,7 @@ btnMute.addEventListener("click", changeIcon);
 
 // Business Logic
 let currentState = 1;
-let numOfPapers = 14;
+let numOfPapers = 15;
 let maxState = numOfPapers + 1;
 
 function openBook() {
@@ -118,14 +118,14 @@ function goNext() {
         paper13.style.zIndex = 13;
         break;
       case 14:
-        closeBook(false);
         paper14.classList.add("flipped");
         paper14.style.zIndex = 14;
         break;
-      // case 15:
-      //   paper15.classList.add("flipped");
-      //   paper15.style.zIndex = 15;
-      //   break;
+      case 15:
+        closeBook(false);
+        paper15.classList.add("flipped");
+        paper15.style.zIndex = 15;
+        break;
       // case 16:
       //   closeBook(false);
       //   paper16.classList.add("flipped");
@@ -146,68 +146,67 @@ function goPrevious() {
         closeBook(true);
         // removeIframe();
         paper1.classList.remove("flipped");
-        paper1.style.zIndex = 14;
+        paper1.style.zIndex = 15;
         break;
       case 3:
         // removeIframe();
         paper2.classList.remove("flipped");
-        paper2.style.zIndex = 13;
+        paper2.style.zIndex = 14;
         break;
       case 4:
         paper3.classList.remove("flipped");
-        paper3.style.zIndex = 12;
+        paper3.style.zIndex = 13;
         break;
       case 5:
         paper4.classList.remove("flipped");
-        paper4.style.zIndex = 11;
+        paper4.style.zIndex = 12;
         break;
       case 6:
         paper5.classList.remove("flipped");
-        paper5.style.zIndex = 10;
+        paper5.style.zIndex = 11;
         break;
       case 7:
         paper6.classList.remove("flipped");
-        paper6.style.zIndex = 9;
+        paper6.style.zIndex = 10;
         break;
       case 8:
         paper7.classList.remove("flipped");
-        paper7.style.zIndex = 8;
+        paper7.style.zIndex = 9;
         break;
       case 9:
         paper8.classList.remove("flipped");
-        paper8.style.zIndex = 7;
+        paper8.style.zIndex = 8;
         break;
       case 10:
         paper9.classList.remove("flipped");
-        paper9.style.zIndex = 6;
+        paper9.style.zIndex = 7;
         break;
       case 11:
         paper10.classList.remove("flipped");
-        paper10.style.zIndex = 5;
+        paper10.style.zIndex = 6;
         break;
       case 12:
         paper11.classList.remove("flipped");
-        paper11.style.zIndex = 4;
+        paper11.style.zIndex = 5;
         break;
       case 13:
         paper12.classList.remove("flipped");
-        paper12.style.zIndex = 3;
+        paper12.style.zIndex = 4;
         break;
       case 14:
         paper13.classList.remove("flipped");
-        paper13.style.zIndex = 2;
+        paper13.style.zIndex = 3;
         break;
       case 15:
-        openBook();
         paper14.classList.remove("flipped");
-        paper14.style.zIndex = 1;
+        paper14.style.zIndex = 2;
+        break;
+      case 16:
+        openBook();
+        paper15.classList.remove("flipped");
+        paper15.style.zIndex = 1;
         removeIframe();
         break;
-      // case 16:
-      //   // removeIframe();
-      //   paper15.classList.remove("flipped");
-      //   paper15.style.zIndex = 2;
-      //   break;
       // case 17:
       //   openBook();
       //   paper16.classList.remove("flipped");
